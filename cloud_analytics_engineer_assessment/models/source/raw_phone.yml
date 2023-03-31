@@ -1,21 +1,24 @@
 version: 2
 
-model: 
-  - name: raw_phone
-  - description: "raw ingestion of phone data"
-    columns:
-      - name: ID_1
-      - description: "primary key for the table"
-      - tests: 
-        - unique
-        - not_null
-      - name: ENTITIY_1
-      - description: "contact number"
-      - tests:
-        - unique
-      - name: PHONE_1
-      - description: "phone number"
-      - name: MOBILE_1
-      - description: "mobile phone number"
-      - name: COUNTRY_CD_1
-      - description: "two letter country code"
+sources: 
+  - name: raw
+    database: RAW
+    schema: DBT_TRENNER
+    description:  RAW DB for ingestion
+    tables: 
+      - name: CDAWE_ASSESSMENT
+        description: >
+          static table with unique ID's, client id, phone and mobile numbers with country code
+        columns:
+          - name: ID_1
+            description: "primary key for the table"
+          - name: ENTITIY_1
+            description: "contact number"
+            tests:
+            - unique
+          - name: PHONE_1
+            description: "phone number"
+          - name: MOBILE_1
+            description: "mobile phone number"
+          - name: COUNTRY_CD_1
+            description: "two letter country code"
