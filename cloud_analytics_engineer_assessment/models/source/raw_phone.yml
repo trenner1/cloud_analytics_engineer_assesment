@@ -1,0 +1,21 @@
+version: 2
+
+model: 
+  - name: raw_phone
+  - description: "raw ingestion of phone data"
+    columns:
+      - name: ID_1
+      - description: "primary key for the table"
+      - tests: 
+        - unique
+        - not_null
+      - name: ENTITIY_1
+      - description: "contact number"
+      - tests:
+        - unique
+      - name: PHONE_1
+      - description: "phone number"
+      - name: MOBILE_1
+      - description: "mobile phone number"
+      - name: COUNTRY_CD_1
+      - description: "two letter country code"
