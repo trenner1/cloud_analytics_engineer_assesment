@@ -2,6 +2,7 @@
   config(
     alias='dim_phone',
     materialized = 'view',
+    secure=true,
     )
 }}
 
