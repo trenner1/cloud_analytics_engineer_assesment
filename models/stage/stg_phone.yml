@@ -2,6 +2,7 @@ version: 2
 
 models:      
   - name: stg_phone
+    description: "staging table for phone to clean and format"
     columns:
       - name: id 
         description: "unique id"
