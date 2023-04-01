@@ -27,4 +27,4 @@
 3. Orchestration via Airflow or integration via Fivetran could allow for automated ingestion and incremental updates.  
 
 ## Lineage graph
-![title](Images/lineage.png)
+![Lineage_graph](images/lineage.png)
