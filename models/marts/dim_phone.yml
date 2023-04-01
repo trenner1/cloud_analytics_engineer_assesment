@@ -2,6 +2,7 @@ version: 2
 
 models:      
   - name: dim_phone
+    description: "Dimension table for phone"
     columns:
       - name: id 
         description: "unique id"

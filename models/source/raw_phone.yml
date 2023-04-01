@@ -4,11 +4,11 @@ sources:
   - name: raw
     database: RAW
     schema: DBT_TRENNER
-    description:  RAW DB for ingestion
+    description:  "RAW DB for ingestion"
     tables: 
       - name: CDAWE_ASSESSMENT
         description: >
-          static table with unique ID's, client id, phone and mobile numbers with country code
+          "static table with unique ID's, client id, phone and mobile numbers with country code"
         columns:
           - name: ID_1
             description: "primary key for the table"
