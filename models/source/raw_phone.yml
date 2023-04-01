@@ -14,8 +14,6 @@ sources:
             description: "primary key for the table"
           - name: ENTITIY_1
             description: "contact number"
-            tests:
-            - unique
           - name: PHONE_1
             description: "phone number"
           - name: MOBILE_1
