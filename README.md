@@ -7,7 +7,7 @@
 3. Normalization was requested in the assessment but I don't believe it is the optimal approach.  If this table is to reside in Snowflake, it should take advantage of columnar DWH architecture.  Each column contains relatively small datatypes and the storage cost of creating a second dim table would be neglible, as would keeping the columns in the same table in a OBT or One Big Table format.  The cost of joining the two (or more) tables repeatedly would add cost to the analytics compute spend.  I recommend using the OBT approach and leaving all fields in the same table.
 4. BI tool is capable of ingesting a view and doesnt require a table.
 5. Phone numbers needed to numeric and not contain -, # or any other special characters, including scientific notation.
-6. Phone numbers that were < 1,000,000 were invalid.
+6. Phone numbers that were < 1,000,000 were invalid. Suspected large phone numbers were left as is and would be investigated for additional source validation.
 
 ## Approach
 
