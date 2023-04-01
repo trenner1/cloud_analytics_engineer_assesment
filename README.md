@@ -17,6 +17,7 @@
 4. Create a stage table to effect cleaning and slight modifications to data type
 5. Create a dimension view over the stage table to implement final buisness logic.  For this assessment, I chose a secure view in order to allow for a share to be created in Snowflake (regular views are not shareable).  The business logic I chose to implement was to keep only the latest account number and associated id and primary phone number.
 6. Implement a .yml file per model rather than one per folder or project.  In this assessment it isn't necessary but it is a good practice.  It allows for model granularity when models become very complex.
+7. Run all models and verify build with `dbt build --full-refresh`
 7. Generate documentation via `dbt docs generate` command.
 8. Inspect the output and revise.
 
@@ -25,3 +26,5 @@
 2. Implement feature branches and multiple environments (sandbox, dev, prod) with github actions managing ci/cd to ensure production safety and automated checks for development issues.
 3. Orchestration via Airflow or integration via Fivetran could allow for automated ingestion and incremental updates.  
 
+## Lineage graph
+![title](Images/lineage.png)
