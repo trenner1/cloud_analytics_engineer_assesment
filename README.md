@@ -4,9 +4,9 @@
 
 1. CDAWE_assessment.csv contains no additional fields for establishing dates of duplicate phone numbers entered, dates for file upload or any other details that could be used to perform incremental updates.
 2. I approached this project with the Kimball Star Schema methodolgy of facts and dimensions.  It is a foundational data wharehousing technique and is accepted throughout the industry.
-3. Normalization was requested in the assessment but I don't believe it is the optimal approach.  If this table is to reside in Snowflake, it should take advantage of columnar DWH architecture.  Each column contains relatively small datatypes and the storage cost of creating a second dim table would be neglible, as would keeping the columns in the same table in a OBT or One Big Table format.  The cost of joining the two (or more) tables repeatedly would add cost to the analytics compute spend.  I recommend using the OBT approach and leaving all fields in the same table.
+3. Normalization was requested in the assessment but I don't believe it is the optimal approach.  If this table is to reside in Snowflake, it should take advantage of columnar DWH architecture.  Each column contains relatively small datatypes and the storage cost of creating a second dim table would be neglible, as would keeping the columns in the same table in a OBT or One Big Table format.  The cost of joining the two (or more) tables repeatedly would add cost to the analytics compute spend.  I recommend using the OBT approach and leaving all fields in the same table.  That being said, if another table were to be created to enrich or compliment the current table, I would recommend splitting the country code off and potentially adding a free share from Snowflake Marketplace such as the ISO country codes to standardize the codes and provide a more fullsome picture for analysts to draw from.
 4. BI tool is capable of ingesting a view and doesnt require a table.
-5. Phone numbers needed to numeric and not contain -, # or any other special characters, including scientific notation.
+5. Phone numbers needed to be numeric and not contain -, # or any other special characters, including scientific notation.
 6. Phone numbers that were < 1,000,000 were invalid. Suspected large phone numbers were left as is and would be investigated for additional source validation.
 
 ## Approach
